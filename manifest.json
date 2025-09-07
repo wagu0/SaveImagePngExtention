@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "画像をPNG保存",
+    "version": "1.0",
+    "description": "右クリックで画像をPNG形式で保存",
+    "permissions": [
+        "downloads",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
